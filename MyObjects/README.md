@@ -22,4 +22,5 @@ crantastic: Rパッケージ検索サイト
 Nabble: Rメーリングリストの一覧  
 ### R Tips  
 `q()`: RStudioの終了  
+`sessionInfo()`: 実行環境の表示  
 *.RData*に作業ディレクトリの内容が保存されている  
