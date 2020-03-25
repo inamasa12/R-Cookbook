@@ -1,6 +1,6 @@
 # R-Cookbook Tips
 
-## Chapter1 Help  
+## Chapter1 ヘルプ  
 ### Rに関するドキュメント  
 1. 付属ドキュメント  
 `help.start()`  
@@ -24,3 +24,13 @@ Nabble: Rメーリングリストの一覧
 `q()`: RStudioの終了  
 `sessionInfo()`: 実行環境の表示  
 *.RData*に作業ディレクトリの内容が保存されている  
+
+## Chapter2 基礎  
+
+
+### R Tips  
+`cat(a, b, c)`: 複数のスカラー、ベクトルを一列に表示  
+`ls()`: 変数のリストを表示  
+`str(a)`: オブジェクトの構造を表示  
+`mode(a)`: データ型を表示  
+`map_dbl(a, f)`: データフレームaの各列に関数fを適用  
