@@ -7,7 +7,7 @@
 `help.seqrch("pattern")`: パッケージを含めたローカルのドキュメント全般を検索  
 1. パッケージドキュメント  
 `help(functionname), help(package="packagename")`: 関数自体のドキュメント  
-`args(functionname)`: 関数の変数のドキュメント
+`args(functionname)`: 関数の変数のドキュメント  
 `example(functionname)`: 関数の使用例  
 `vignette()`: ビニエット（付属ドキュメント）の一覧  
 1. CRAN（The Comprehensive R Archive Network）  
@@ -30,7 +30,7 @@ Nabble: Rメーリングリストの一覧
 ベクトルの要素を除外するには負のインデックスを使う  
 異なるデータ型を混ぜることはできない  
 names属性で各要素に名前を付けることができる  
-* 注意事項
+* 注意事項  
 \は使用できない  
 通常の演算で使用する論理式には&と|を使い、条件文で使用する論理式には&&と||を使う  
 
