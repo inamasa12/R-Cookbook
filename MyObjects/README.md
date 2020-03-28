@@ -48,8 +48,16 @@ names属性で各要素に名前を付けることができる
 作業ディレクトリ  
 プロジェクト  
 作業スペース  
+* データ  
+datasets内のデータはロード済みのため、すぐに使える  
+`data()`: datasetsパッケージのデータ一覧  
+`data(package="pkgname")`: 特定のパッケージのデータ一覧  
+`data(dname, package="pkgname")`: 特定のパッケージのデータをロード  
+`help(dname)`: データの内容説明  
 
 ### R Tips  
 `save.image()`: 作業スペースの保存  
 `search()`: ロード済みのパッケージ  
 `library()`: インストール済みのパッケージ  
+`detach(package:ggplot2)`: パッケージをメモリから削除  
+
