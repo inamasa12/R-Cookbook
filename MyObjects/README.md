@@ -48,16 +48,24 @@ names属性で各要素に名前を付けることができる
 作業ディレクトリ  
 プロジェクト  
 作業スペース  
+ホームディレクトリ: R本体がインストールされているフォルダ    
+
 * データ  
 datasets内のデータはロード済みのため、すぐに使える  
 `data()`: datasetsパッケージのデータ一覧  
 `data(package="pkgname")`: 特定のパッケージのデータ一覧  
 `data(dname, package="pkgname")`: 特定のパッケージのデータをロード  
 `help(dname)`: データの内容説明  
+* コマンドプロンプトからの実行  
+`R CMD BATCH scriptfile outputfile`: スクリプトファイルからの実行  
+`Rscript scriptfile arg1 arg2 ...`: 引数が必要な場合  
+
 
 ### R Tips  
 `save.image()`: 作業スペースの保存  
 `search()`: ロード済みのパッケージ  
 `library()`: インストール済みのパッケージ  
 `detach(package:ggplot2)`: パッケージをメモリから削除  
+`source("myScript.R")`: スクリプトの実行  
+
 
