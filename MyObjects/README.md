@@ -4,7 +4,7 @@
 ### Rに関するドキュメント  
 1. 付属ドキュメント  
 `help.start()`  
-`help.seqrch("pattern")`: パッケージを含めたローカルのドキュメント全般を検索  
+`help.search("pattern")`: パッケージを含めたローカルのドキュメント全般を検索  
 1. パッケージドキュメント  
 `help(functionname), help(package="packagename")`: 関数自体のドキュメント  
 `args(functionname)`: 関数の変数のドキュメント  
@@ -48,7 +48,7 @@ names属性で各要素に名前を付けることができる
 作業ディレクトリ  
 プロジェクト  
 作業スペース  
-ホームディレクトリ: R本体がインストールされているフォルダ    
+ホームディレクトリ: R本体がインストールされているフォルダ、`Sys.getenv("R_HOME")`で表示    
 
 * データ  
 datasets内のデータはロード済みのため、すぐに使える  
@@ -59,6 +59,10 @@ datasets内のデータはロード済みのため、すぐに使える
 * コマンドプロンプトからの実行  
 `R CMD BATCH scriptfile outputfile`: スクリプトファイルからの実行  
 `Rscript scriptfile arg1 arg2 ...`: 引数が必要な場合  
+* オプション設定  
+`options(prompt="R> ")`: 設定  
+`options()`: 一覧  
+`help(options)`: 説明  
 
 
 ### R Tips  
