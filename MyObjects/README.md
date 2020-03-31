@@ -44,11 +44,16 @@ names属性で各要素に名前を付けることができる
 `filter(df, col > 20)`: データフレームの行を抽出  
 `%>%`: パイプ演算子、出力を次に来る関数の第一変数として渡す
 
-## Chapter3 実行環境  
-作業ディレクトリ  
-プロジェクト  
-作業スペース  
+## Chapter3 `Sys.setenv(DB_USERID = "my_id")`: 環境変数の設定  実行環境  
+作業スペース: メインメモリ、使用中のデータや変数、関数が置かれる  
+作業ディレクトリ: 入出力ファイルが置かれるデフォルト、作業スペースを記録した.RDataが置かれる  
+プロジェクト: 作業スペースと作業ディレクトリのセット、.Rprojに設定が保存される  
 ホームディレクトリ: R本体がインストールされているフォルダ、`Sys.getenv("R_HOME")`で表示    
+
+* 環境設定  
+環境変数設定を記載した.Profileファイルを作成し、ホームディレクトリに保存しておけば、R起動時に実行される  
+`Sys.setenv(DB_USERID = "my_id")`: 環境変数の設定  
+`Sys.getenv()`: 環境変数一覧  
 
 * データ  
 datasets内のデータはロード済みのため、すぐに使える  
@@ -56,14 +61,16 @@ datasets内のデータはロード済みのため、すぐに使える
 `data(package="pkgname")`: 特定のパッケージのデータ一覧  
 `data(dname, package="pkgname")`: 特定のパッケージのデータをロード  
 `help(dname)`: データの内容説明  
+
 * コマンドプロンプトからの実行  
 `R CMD BATCH scriptfile outputfile`: スクリプトファイルからの実行  
 `Rscript scriptfile arg1 arg2 ...`: 引数が必要な場合  
+
 * オプション設定  
-`options(prompt="R> ")`: 設定  
+`options(prompt="R> ")`: 設定
+`options("prompt")`: 値の取得  
 `options()`: 一覧  
 `help(options)`: 説明  
-
 
 ### R Tips  
 `save.image()`: 作業スペースの保存  
@@ -71,5 +78,7 @@ datasets内のデータはロード済みのため、すぐに使える
 `library()`: インストール済みのパッケージ  
 `detach(package:ggplot2)`: パッケージをメモリから削除  
 `source("myScript.R")`: スクリプトの実行  
+`install_github("thomasp85/tidygraph")`: githubからのパッケージインストール  
 
+## Chapter4 入出力  
 
