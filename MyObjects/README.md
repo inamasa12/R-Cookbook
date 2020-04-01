@@ -81,4 +81,22 @@ datasets内のデータはロード済みのため、すぐに使える
 `install_github("thomasp85/tidygraph")`: githubからのパッケージインストール  
 
 ## Chapter4 入出力  
+* リダイレクト  
+処理結果がfilenameに出力される  
+~~~
+sink("filename")
+# 処理
+sink()
+~~~
+* コネクション  
+filenameへの追加型の書き込み
+~~~
+con <- file("filename", "w")
+cat(data1, file=con)
+cat(data2, file=con)
+close(con)
+~~~
+
+### R Tips  
+`list.files()`: 作業ディレクトリのファイル一覧  
 
