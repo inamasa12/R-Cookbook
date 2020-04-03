@@ -81,6 +81,8 @@ datasets内のデータはロード済みのため、すぐに使える
 `install_github("thomasp85/tidygraph")`: githubからのパッケージインストール  
 
 ## Chapter4 入出力  
+readrパッケージがお勧め（固定幅、タブ・スペース区切り、カンマ区切り等に対応する関数がそれぞれある）  
+
 * リダイレクト  
 処理結果がfilenameに出力される  
 ~~~
