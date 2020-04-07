@@ -104,4 +104,7 @@ close(con)
 
 ### R Tips  
 `list.files()`: 作業ディレクトリのファイル一覧  
+`readLines('filename')`: 各行を文字列として取得  
+`scan("filename" or "URL", what=numeric(0))`: 各行のトークンを左から右にスキャン  
+`order(vector)`: 昇順ランクのリストを返す  
 
