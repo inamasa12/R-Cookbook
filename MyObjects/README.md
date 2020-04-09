@@ -77,6 +77,7 @@ datasets内のデータはロード済みのため、すぐに使える
 `search()`: ロード済みのパッケージ  
 `library()`: インストール済みのパッケージ  
 `detach(package:ggplot2)`: パッケージをメモリから削除  
+`remove.packages("ggplot2")`: パッケージを完全に削除  
 `source("myScript.R")`: スクリプトの実行  
 `install_github("thomasp85/tidygraph")`: githubからのパッケージインストール  
 
