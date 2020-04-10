@@ -76,6 +76,7 @@ datasets内のデータはロード済みのため、すぐに使える
 `save.image()`: 作業スペースの保存  
 `search()`: ロード済みのパッケージ  
 `library()`: インストール済みのパッケージ  
+`installed.packages()`: インストール済みのパッケージ詳細  
 `detach(package:ggplot2)`: パッケージをメモリから削除  
 `remove.packages("ggplot2")`: パッケージを完全に削除  
 `source("myScript.R")`: スクリプトの実行  
@@ -113,8 +114,11 @@ close(con)
 ~~~
 
 ### R Tips  
-`list.files()`: 作業ディレクトリのファイル一覧  
+`list.files(path='data/')`: 作業ディレクトリのファイル一覧  
 `readLines('filename')`: 各行を文字列として取得  
 `scan("filename" or "URL", what=numeric(0))`: 各行のトークンを左から右にスキャン  
 `order(vector)`: 昇順ランクのリストを返す  
+`save(object1, object2, file="myData.RData")`: オブジェクトの保存  
+`load('myData.RData')`: オブジェクトの再現  
 
+## Chapter5 データ構造  
