@@ -86,6 +86,15 @@ readrパッケージがお勧め（固定幅、タブ・スペース区切り、
 URLを指定して、HTTPサーバーやFTPサーバーから直接データを取得することも可能  
 Excelとのやりとりにはopenxlsxを用いる  
 HTMLの読み込みとデータテーブルの抽出にはrvestが便利  
+各種RDBとの連携には、ベースとなるDBIと各種バックエンドパッケージが必要になる  
+tidyverseパッケージのdbplyrで各種RDBのデータをtydyverseライクに操作できる（対応したSQLを使い分ける必要がない）  
+|パッケージ|RDB|
+|:--:|:--:|
+|odbc|Microsoft SQL Server|
+|RPostgreSQL|Postgres, Redshift|
+|RMySQL|MySQL, MariaDB|
+|RSQLite|SQLite|
+|bigquery|Google BigQuery|
 
 * リダイレクト  
 処理結果がfilenameに出力される  
