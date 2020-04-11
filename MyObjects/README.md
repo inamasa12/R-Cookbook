@@ -121,4 +121,10 @@ close(con)
 `save(object1, object2, file="myData.RData")`: オブジェクトの保存  
 `load('myData.RData')`: オブジェクトの再現  
 
+
 ## Chapter5 データ構造  
+
+### R Tips  
+`class(object)`: オブジェクトのクラス  
+`dim(vector)=c(2, 3)`: ベクトルをマトリックスに変換  
+
