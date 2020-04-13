@@ -140,18 +140,28 @@ close(con)
 tibble: tidyverseで使われる定義が厳格なデータフレーム  
 
 ### データ整形テクニック  
-* カテゴリ別データ  
+* カテゴリ別データの作成  
 ~~~
 freshman <- c(1, 2, 1, 1, 5)
 sophomores <- c(3, 2, 3, 3, 5)
 juniors <- c(5, 3, 4, 3, 3)
 comb <- stack(list(fresh = freshman, soph = sophomores, jrs = juniors))
 ~~~
-
+* 名前付きリストの作成  
+~~~
+values <- 1:3
+names <- letters[1:3]
+lst <- list()
+lst[names] <- values
+~~~
 
 
 
 ### R Tips  
 `class(object)`: オブジェクトのクラス  
+`typeof(object)`: 要素のデータ型  
 `dim(vector)=c(2, 3)`: ベクトルをマトリックスに変換  
+`list$name <- NULL`: NULLを割り当てることで要素を削除する  
+`unlist(list)`: リストをベクトルに変換  
+
 
