@@ -139,6 +139,16 @@ close(con)
 データフレーム: 特殊な形式のリスト  
 tibble: tidyverseで使われる定義が厳格なデータフレーム  
 
+### データ整形テクニック  
+* カテゴリ別データ  
+~~~
+freshman <- c(1, 2, 1, 1, 5)
+sophomores <- c(3, 2, 3, 3, 5)
+juniors <- c(5, 3, 4, 3, 3)
+comb <- stack(list(fresh = freshman, soph = sophomores, jrs = juniors))
+~~~
+
+
 
 
 ### R Tips  
