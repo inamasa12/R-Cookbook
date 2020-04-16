@@ -163,5 +163,6 @@ lst[names] <- values
 `dim(vector)=c(2, 3)`: ベクトルをマトリックスに変換  
 `list$name <- NULL`: NULLを割り当てることで要素を削除する  
 `unlist(list)`: リストをベクトルに変換  
-
-
+`l(s)apply(object, func)`: リストの各要素や表の列要素に対して関数を適用する、lはリストでsはマトリックスで結果を返す  
+`do.call(func, list)`: リストの各要素を変数として関数に代入する  
+`Map(func, list)`: リストの各要素に対して関数を適用する（lapplyと機能的には同じ）  
