@@ -155,8 +155,6 @@ lst <- list()
 lst[names] <- values
 ~~~
 
-
-
 ### R Tips  
 `class(object)`: オブジェクトのクラス  
 `typeof(object)`: 要素のデータ型  
@@ -166,3 +164,7 @@ lst[names] <- values
 `l(s)apply(object, func)`: リストの各要素や表の列要素に対して関数を適用する、lはリストでsはマトリックスで結果を返す  
 `do.call(func, list)`: リストの各要素を変数として関数に代入する  
 `Map(func, list)`: リストの各要素に対して関数を適用する（lapplyと機能的には同じ）  
+`na.omit(object)`: NAがある行を削除  
+`inner(full, left, right)_join(df1, df2, by=key)`: データフレームの結合処理  
+
+
