@@ -173,7 +173,8 @@ lst[names] <- values
 
 
 ### R Tips  
-`map(list, func) or lapply(list, func)`: リストの各要素（データフレームの場合は列が相当する）に関数を適用し、結果をリストで返す（ベクトルで返すのがsapply）  
+`map(list, func) or lapply(list, func)`:  
+リストの各要素（データフレームの場合は列が相当する）に関数を適用し、結果をリストで返す（ベクトルで返すのがsapply）  
 `rowwise()`: データフレームの行毎に各要素を抽出  
-`mutate(df, col=func(col_old))`: データフレームの列を処理 
+`mutate(df, col=func(col_old))`: データフレームの列を処理  
 `apply(matrix or df, 1 or 2, func)`: 行(1)もしくは列(2)に関数を適用  
