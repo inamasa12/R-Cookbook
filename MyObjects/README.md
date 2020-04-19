@@ -167,7 +167,7 @@ lst[names] <- values
 `na.omit(object)`: NAがある行を削除  
 `inner(full, left, right)_join(df1, df2, by=key)`: データフレームの結合処理  
 
-## Chapter5 データ変換  
+## Chapter6 データ変換  
 極力ループ処理を避け、ベクトル計算を行う  
 データフレームの処理にtidyverseは便利だが、大規模な行列演算ではapplyのスピードが速い  
 
@@ -178,3 +178,4 @@ lst[names] <- values
 `rowwise()`: データフレームの行毎に各要素を抽出  
 `mutate(df, col=func(col_old))`: データフレームの列を処理  
 `apply(matrix or df, 1 or 2, func)`: 行(1)もしくは列(2)に関数を適用  
+`map2(vec1, vec2, func) or pmap(list of vecs, func)`: スカラー対応の関数に変数をベクトルで与え、結果をベクトルもしくはリストで返す  
