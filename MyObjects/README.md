@@ -170,12 +170,22 @@ lst[names] <- values
 ## Chapter6 データ変換  
 極力ループ処理を避け、ベクトル計算を行う  
 データフレームの処理にtidyverseは便利だが、大規模な行列演算ではapplyのスピードが速い  
-
+* グループ別の集計  
+~~~
+df %>% 
+  group_by(col1, col2) %>%
+  summarize(
+    result_var = fun(target_var)
+    )
+~~~
 
 ### R Tips  
 `map(list, func) or lapply(list, func)`:  
 リストの各要素（データフレームの場合は列が相当する）に関数を適用し、結果をリストで返す（ベクトルで返すのがsapply）  
 `rowwise()`: データフレームの行毎に各要素を抽出  
-`mutate(df, col=func(col_old))`: データフレームの列を処理  
+`mutate(df, col=func(col_old))`: データフレームの列を処理（追加、上書き）  
 `apply(matrix or df, 1 or 2, func)`: 行(1)もしくは列(2)に関数を適用  
 `map2(vec1, vec2, func) or pmap(list of vecs, func)`: スカラー対応の関数に変数をベクトルで与え、結果をベクトルもしくはリストで返す  
+`case_when(conditions)`: tidyverseにおけるcase処理  
+
+## Chapter7 文字列と日付  
