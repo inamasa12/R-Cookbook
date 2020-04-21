@@ -189,3 +189,22 @@ df %>%
 `case_when(conditions)`: tidyverseにおけるcase処理  
 
 ## Chapter7 文字列と日付  
+日付クラスは、Date、chron、POSIXの順で選択すると良い  
+Date: 日付汎用クラスだが、時刻を扱えない  
+chron: 時刻対応しているが、機能が少ない  
+POSIX: 時刻対応しているが、やや複雑  
+その他、tidyverseの日付時刻操作パッケージとして、lubridateがある  
+正規表現を使用する場合はregexp
+
+### R Tips  
+`nchar(char)`: 文字列の長さをカウントする  
+`paste(c('a', 'b'), 'c', sep=', ')`: 異なるベクトルの要素同士の連結、要素数が少ない方のベクトルはリサイクルされる  
+`paste(c('a', 'b'), collapse=', ')`: 同じベクトルの要素を連結  
+`substr(char, 2, 5)`: 文字列から指定の範囲を抽出  
+`strsplit(char, '/')`: 指定の文字（正規表現も可能）で部分文字列のベクトルに分割  
+`(g)sub('a', 'b', char)`: 文字列の'a'を'b'で置き換え（gを付けないと最初の一致部分だけを置き換え）  
+`outer(vec1, vec2, func)`: 全ての要素の組み合わせについて関数を適用する（結果は行列で返す）  
+`expand.grid(vec1, vec2)`: 全ての組み合わせをデータフレームにして返す  
+`lower.tri(matrix)`: 下三角にTRUE  
+
+
