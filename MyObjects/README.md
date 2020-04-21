@@ -194,7 +194,8 @@ Date: 日付汎用クラスだが、時刻を扱えない
 chron: 時刻対応しているが、機能が少ない  
 POSIX: 時刻対応しているが、やや複雑  
 その他、tidyverseの日付時刻操作パッケージとして、lubridateがある  
-正規表現を使用する場合はregexp
+正規表現を使用する場合はregexp  
+seqはDateクラスに対応している  
 
 ### R Tips  
 `nchar(char)`: 文字列の長さをカウントする  
@@ -206,5 +207,11 @@ POSIX: 時刻対応しているが、やや複雑
 `outer(vec1, vec2, func)`: 全ての要素の組み合わせについて関数を適用する（結果は行列で返す）  
 `expand.grid(vec1, vec2)`: 全ての組み合わせをデータフレームにして返す  
 `lower.tri(matrix)`: 下三角にTRUE  
+`Sys.Date()`: 現在の日付  
+`as.Date('12-31-2020', format='%m-%d-%Y')`: 文字列の日付を日付クラスに変換（デフォルトはYYYY/MM/DD） 
+`format(Sys.Date(), format='%m-%d-%Y')`: 日付クラスを文字列に変換（書式はstrftimeのヘルプを参照）  
+`ISOdate(year, month, date)`: 年月日からPOSIXctの日付を生成  
+
+## Chapter8 確率  
 
 
