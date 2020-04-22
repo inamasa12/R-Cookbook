@@ -213,5 +213,15 @@ seqはDateクラスに対応している
 `ISOdate(year, month, date)`: 年月日からPOSIXctの日付を生成  
 
 ## Chapter8 確率  
+rは乱数の生成、  
+ベルヌーイ試行は、一定確率で成功（失敗）を繰り返すプロセス  
+n回ベルヌーイ試行を行った時の成功回数の確率分布が二項分布（パラメータは試行回数と成功確率） 
+n=1の二項分布はベルヌーイ分布と同じ  
+
+### R Tips  
+`choose(n, k)`: 組合せの数  
+`combn(vec, k)`: 全ての組合せを行列で出力  
+`set.seed(n)`: 乱数シードの固定  
+`sample(vec, n, replace=TRUE)`: vecからn個の無作為抽出、replaceがTRUEなら復元抽出、FALSE（デフォルト）なら非復元抽出  
 
 
