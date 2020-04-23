@@ -224,4 +224,8 @@ n=1の二項分布はベルヌーイ分布と同じ
 `set.seed(n)`: 乱数シードの固定  
 `sample(vec, n, replace=TRUE)`: vecからn個の無作為抽出、replaceがTRUEなら復元抽出、FALSE（デフォルト）なら非復元抽出  
  
+## Chapter9 一般統計学  
+
+### R Tips  
+`summary(vec)`: 統計量（四分位値、最大値、最小値、平均値）  
 
