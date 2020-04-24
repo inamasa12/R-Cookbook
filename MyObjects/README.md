@@ -224,14 +224,23 @@ n=1の二項分布はベルヌーイ分布と同じ
 `set.seed(n)`: 乱数シードの固定  
 `sample(vec, n, replace=TRUE, prob=c(0.8, 0.2)`: vecからn個の無作為抽出、replaceがTRUEなら復元抽出、FALSE（デフォルト）なら非復元抽出  
  
+
 ## Chapter9 一般統計学  
+* 一変量のt検定（平均値の検定）    
+平均値の水準を検定、帰無仮説は「平均はmである」  
+サンプル数が多い場合（30以上が目安）は対象の変量の分布は問わないが、少ない場合は正規分布である必要がある  
+
+* 一変量のウィルコクソン符号付順位検定（中央値の検定）
+中央値の水準を検定、帰無仮説は「中央値はmuである」  
 
 ### R Tips  
 `summary(vec)`: 統計量（四分位値、最大値、最小値、平均値）  
 `mean(conditions)`: 割合の計算、パーセンタイル値の算出  
 `table(vec1, vec2)`: 集計表を作成  
 `summary(cross table)`: 独立性のカイ二乗検定  
-`scale(vec)': 正規化（zスコア）  
+`scale(vec)`: 正規化（zスコア）  
+`t.test(vec, m=100, conf.level=0.99)`: 一変量のt検定  
+`wilcox.text(vec, mu=100, conf.int=TRUE)`: 一変量のウィルコクソン符号付順位検定  
 
 
 
