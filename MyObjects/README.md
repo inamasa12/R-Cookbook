@@ -222,10 +222,18 @@ n=1の二項分布はベルヌーイ分布と同じ
 `choose(n, k)`: 組合せの数  
 `combn(vec, k)`: 全ての組合せを行列で出力  
 `set.seed(n)`: 乱数シードの固定  
-`sample(vec, n, replace=TRUE)`: vecからn個の無作為抽出、replaceがTRUEなら復元抽出、FALSE（デフォルト）なら非復元抽出  
+`sample(vec, n, replace=TRUE, prob=c(0.8, 0.2)`: vecからn個の無作為抽出、replaceがTRUEなら復元抽出、FALSE（デフォルト）なら非復元抽出  
  
 ## Chapter9 一般統計学  
 
 ### R Tips  
 `summary(vec)`: 統計量（四分位値、最大値、最小値、平均値）  
+`mean(conditions)`: 割合の計算、パーセンタイル値の算出  
+`table(vec1, vec2)`: 集計表を作成  
+`summary(cross table)`: 独立性のカイ二乗検定  
+`scale(vec)': 正規化（zスコア）  
+
+
+
+
 
