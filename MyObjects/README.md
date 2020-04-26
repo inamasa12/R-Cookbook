@@ -248,6 +248,10 @@ vecからn個の無作為抽出、replaceがTRUEなら復元抽出、FALSE（デ
 標本比率の水準を検定  
 仮定する比率からの乖離をカイ二乗検定する  
 
+* 相関の検定  
+正規母集団の変数についてはピアソン、非正規母集団についてはスピアマンを用いるべき  
+corのデフォルトはピアソン  
+
 ### R Tips  
 `summary(vec)`: 統計量（四分位値、最大値、最小値、平均値）  
 `mean(conditions)`: 割合の計算、パーセンタイル値の算出  
@@ -256,12 +260,15 @@ vecからn個の無作為抽出、replaceがTRUEなら復元抽出、FALSE（デ
 `scale(vec)`: 正規化（zスコア）  
 `t.test(vec, m=100, conf.level=0.99)`: 一変量のt検定  
 `t.test(vec1, vec2, paired=TRUE)`: 二変量のt検定、paierdはサンプルの個体が同一の場合  
+`pairwise.t.test(values, factors)`: 多変量のt検定  
 `wilcox.text(vec, mu=100, conf.int=TRUE)`: 一変量のウィルコクソン符号付順位検定（ノンパラメトリック）  
 `wilcox.text(vec1, vec2, paired=TRUE)`: 二変量のウィルコクソン＝マン・ホイットニー検定（ノンパラメトリック）  
-`prop.test(出現回数, サンプル数, 想定確率)`: 標本比率の検定、信頼区間  
+`prop.test(出現回数, サンプル数, 想定確率)`: 標本比率の検定、信頼区間、一変量の場合  
+`prop.test(c(出現回数), c(サンプル数))`: 標本比率の検定、複数変量の場合  
 `shaprio.test(vec)`: 正規性の検定  
 `runs.test(factor)`: 連検定、帰無仮説は「ランダムな配列である」  
 `load(data.rdata)`: rdataファイルの読み込み  
+`cor.test(vec1, vec2, method="spearman")`: 相関の検定  
 
 
 
