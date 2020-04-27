@@ -269,7 +269,11 @@ corのデフォルトはピアソン
 `runs.test(factor)`: 連検定、帰無仮説は「ランダムな配列である」  
 `load(data.rdata)`: rdataファイルの読み込み  
 `cor.test(vec1, vec2, method="spearman")`: 相関の検定  
+`ks.test(vec1, vec2)`: コルモゴロフ＝スミルノフ検定、分布の形状の差異をノンパラメトリック検定  
 
 
+## Chapter10 グラフィックス  
+
+### R Tips  
 
 
