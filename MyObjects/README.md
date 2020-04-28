@@ -277,22 +277,28 @@ corのデフォルトはピアソン
 ggplotが基本のプロット用関数  
 リスト型（縦長）に形成したデータフレームがデータの基本形  
 aes関数（エステティック属性）でデータ項目を対応するグラフ項目に紐付ける ⇒ aes(x軸に割り当てる項目, y軸に割り当てる項目)  
+　ファクタに応じてプロットの形や色を変える場合は、shape、colorにファクタを指定する  
 グラフの形状を決める幾何オブジェクト関数(geom)  
 　散布図: geom_point()、折れ線グラフ: geom_line()、箱ひげ図: geom_boxplot()  
 ラベル関係はlabsで指定  
 　title、x、yでそれぞれの名前を指定  
 背景はthemeで指定、目盛りpenel.grid.major、補助目盛りpanel.grid.minor、背景penel.backgroundがある  
 　element_line(rect)について、colorやlinetype、fillなどを指定  
-例  
+　既成の背景、theme_bw()、theme_minimal()等がある  
+凡例が不要な場合はtheme(legend.position = "none")で指定する（left、right、bottom、topや座表軸で位置指定が可能）  
+
+ 
+例）  
 ~~~
-ggplot(mtcars, aes(hp, mpg)) +
+ggplot(mtcars, aes(hp, mpg, color=type, shape=type)) +
   geom_point() +
   labs(title="The Title",
        x="X-axis Label",
        y="Y-axis Label") +
   theme(panel.background=element_rect(fill="white", color="grey")) +
   theme(panel.grid.major=element_line(color="red", linetype=3)) +
-  theme(panel.grid.minor=element_line(color="blue", linetype=4))
+  theme(panel.grid.minor=element_line(color="blue", linetype=4)) +
+  theme(legend.position="none")
 ~~~
 
 ### R Tips  
