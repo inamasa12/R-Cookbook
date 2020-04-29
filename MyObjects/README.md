@@ -288,6 +288,7 @@ aes関数（エステティック属性）でデータ項目を対応するグ�
 凡例が不要な場合はtheme(legend.position = "none")で指定する（left、right、bottom、topや座表軸で位置指定が可能）  
 ファクタ別にサブプロットを作成する場合はfacet_wrap(~fact)を使う
 geom_smooth、geom_ablineで補助線を追加できる  
+棒グラフはgeom_bar、集計の有無は引数statで指定する  
 
 例）  
 ~~~
