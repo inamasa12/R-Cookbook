@@ -278,8 +278,9 @@ ggplotが基本のプロット用関数
 リスト型（縦長）に形成したデータフレームがデータの基本形  
 aes関数（エステティック属性）でデータ項目を対応するグラフ項目に紐付ける ⇒ aes(x軸に割り当てる項目, y軸に割り当てる項目)  
 　ファクタに応じてプロットの形や色を変える場合は、shape、colorにファクタを指定する  
+　order（軸に割り当てる項目、ソートする項目）で並びを変えることが可能   
 グラフの形状を決める幾何オブジェクト関数(geom)  
-　散布図: geom_point()、折れ線グラフ: geom_line()、箱ひげ図: geom_boxplot()  
+　散布図: geom_point()、折れ線グラフ: geom_line()、箱ひげ図: geom_boxplot()、棒グラフ: geom_bar()  
 ラベル関係はlabsで指定  
 　title、x、yでそれぞれの名前を指定  
 背景はthemeで指定、目盛りpenel.grid.major、補助目盛りpanel.grid.minor、背景penel.backgroundがある  
@@ -289,6 +290,8 @@ aes関数（エステティック属性）でデータ項目を対応するグ�
 ファクタ別にサブプロットを作成する場合はfacet_wrap(~fact)を使う
 geom_smooth、geom_ablineで補助線を追加できる  
 棒グラフはgeom_bar、集計の有無は引数statで指定する  
+折れ線グラフはgeom_line、linetype、size、colで線の形状を指定する  
+
 
 例）  
 ~~~
@@ -310,5 +313,6 @@ ggplot(mtcars, aes(hp, mpg, color=type, shape=type)) +
 
 
 ### R Tips  
+gather(df, 分類名, 値名, -対象外の列): データフレームをリスト型の列に変換する  
 
 
