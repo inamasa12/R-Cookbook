@@ -288,9 +288,11 @@ aes関数（エステティック属性）でデータ項目を対応するグ�
 　既成の背景、theme_bw()、theme_minimal()等がある  
 凡例が不要な場合はtheme(legend.position = "none")で指定する（left、right、bottom、topや座表軸で位置指定が可能）  
 ファクタ別にサブプロットを作成する場合はfacet_wrap(~fact)を使う
-geom_smooth、geom_ablineで補助線を追加できる  
+geom_smooth、geom_abline、geom_hline、geom_vlineで補助線を追加できる  
 棒グラフはgeom_bar、集計の有無は引数statで指定する  
 折れ線グラフはgeom_line、linetype、size、colで線の形状を指定する  
+箱ひげ図はgeom_boxplot、coord_flip()で軸を回転させることができる  
+ヒストグラムはgeom_histogram、binsで区分の数を設定  
 
 
 例）  
