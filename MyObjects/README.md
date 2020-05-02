@@ -292,8 +292,7 @@ geom_smooth、geom_abline、geom_hline、geom_vlineで補助線を追加でき�
 棒グラフはgeom_bar、集計の有無は引数statで指定する  
 折れ線グラフはgeom_line、linetype、size、colで線の形状を指定する  
 箱ひげ図はgeom_boxplot、coord_flip()で軸を回転させることができる  
-ヒストグラムはgeom_histogram、binsで区分の数を設定  
-
+ヒストグラムはgeom_histogram、binsで区分の数を設定、geom_density(aes(y=..density..))で密度分布を追加  
 
 例）  
 ~~~
@@ -307,6 +306,13 @@ ggplot(mtcars, aes(hp, mpg, color=type, shape=type)) +
   theme(panel.grid.minor=element_line(color="blue", linetype=4)) +
   facet_wrap(~type) +
   theme(legend.position="none")
+~~~
+
+* Q-Qプロット  
+~~~
+ggplot(df, aes(sample=x)) +
+  stat_qq() +
+  stat_qq_line()
 ~~~
 
 * それ以外  
