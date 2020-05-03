@@ -309,10 +309,11 @@ ggplot(mtcars, aes(hp, mpg, color=type, shape=type)) +
 ~~~
 
 * Q-Qプロット  
+stat_qqがプロット、stat_qq_lineが理論線を描画する  
 ~~~
 ggplot(df, aes(sample=x)) +
-  stat_qq() +
-  stat_qq_line()
+  stat_qq(想定する分布とパラメータ、デフォルトは正規分布) +
+  stat_qq_line(想定する分布とパラメータ、デフォルトは正規分布)
 ~~~
 
 * それ以外  
