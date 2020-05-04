@@ -293,6 +293,7 @@ geom_smooth、geom_abline、geom_hline、geom_vlineで補助線を追加でき�
 折れ線グラフはgeom_line、linetype、size、colで線の形状を指定する  
 箱ひげ図はgeom_boxplot、coord_flip()で軸を回転させることができる  
 ヒストグラムはgeom_histogram、binsで区分の数を設定、geom_density(aes(y=..density..))で密度分布を追加  
+ggsaveで保存  
 
 例）  
 ~~~
@@ -305,15 +306,34 @@ ggplot(mtcars, aes(hp, mpg, color=type, shape=type)) +
   theme(panel.grid.major=element_line(color="red", linetype=3)) +
   theme(panel.grid.minor=element_line(color="blue", linetype=4)) +
   facet_wrap(~type) +
-  theme(legend.position="none")
+  theme(legend.position="none") +
+  ggsave("filename.jpg")
 ~~~
 
 * Q-Qプロット  
+想定する分布とサンプルの分布の累積密度のペアをプロットしたもの  
+サンプルの分布が想定する分布と同じであれば、プロットは直線になる  
 stat_qqがプロット、stat_qq_lineが理論線を描画する  
 ~~~
 ggplot(df, aes(sample=x)) +
   stat_qq(想定する分布とパラメータ、デフォルトは正規分布) +
   stat_qq_line(想定する分布とパラメータ、デフォルトは正規分布)
+~~~
+
+* 特定の関数のグラフ化  
+stat_functionを用いる  
+自作の関数を描画することも可能  
+~~~
+f <- function(x) exp(-abs(x))*sin(2*pi*x)
+ggplot(data.frame(x=c(-3, 3))) +
+  aes(x) +
+  stat_function(fun=f)
+~~~
+
+* patchworkライブラリ  
+グラフをまとめることができる  
+~~~
+g1 + g2 + g3 + g3 + plot_layout(ncol=2)
 ~~~
 
 * それ以外  
@@ -323,5 +343,6 @@ ggplot(df, aes(sample=x)) +
 
 ### R Tips  
 gather(df, 分類名, 値名, -対象外の列): データフレームをリスト型の列に変換する  
-
-
+colors(): 使用可能な色のリストを出力  
+tidyverse::if_else(condition, A, B): if演算  
+ggsave("g1.jpg", plot=g1, units="in", width=5, height=4): ggsaveは独立した関数としても使用できる  
