@@ -339,10 +339,14 @@ g1 + g2 + g3 + g3 + plot_layout(ncol=2)
 * それ以外  
 二変数の関係をプロットするには、GGally::ggpairs()、plot()が便利  
 
-
-
 ### R Tips  
 gather(df, 分類名, 値名, -対象外の列): データフレームをリスト型の列に変換する  
 colors(): 使用可能な色のリストを出力  
 tidyverse::if_else(condition, A, B): if演算  
 ggsave("g1.jpg", plot=g1, units="in", width=5, height=4): ggsaveは独立した関数としても使用できる  
+
+## Chapter11 線形回帰とANOVA  
+
+R2は予測値の分散を実測値の分散で割ったもの  
+F値は予測値の分散を予測誤差の分散で割ったもの、これが有意に大きい時に「全ての回帰係数がゼロ」という帰無仮説は棄却される  
+
