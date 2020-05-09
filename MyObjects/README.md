@@ -352,11 +352,22 @@ F値は予測値の分散を予測誤差の分散で割ったもの、これが�
 回帰はlm関数を使用する  
 交互作用項は他の変数によって、ある変数の説明力が影響を受けることを考慮する  
 ~~~
-lm(y ~ x1 + x2, data=df, subset=(col1=="A"))
+lm(y ~ x1 + x2, data=df, subset=(col1=="A"))lm(y ~ u + I(u^2), data=df)
 ~~~
 ステップワイズ回帰において、変数を減らすのが後退法、増やすのが前進法  
 ~~~
 step(full.model, direction="backward")
 step(min.model, direction="forward", scope=(~x1 + x2 + x3 + x4))
 ~~~
-
+回帰式の中で演算子を普通に使いたい場合はI()で囲む  
+~~~
+lm(y ~ u + I(u^2), data=df)
+~~~
+特に多項式回帰を行う場合はpoly関数を用いる  
+~~~
+lm(y ~ poly(x, 3, raw=TRUE))
+~~~
+関数変換はそのまま使用できる  
+~~~
+lm(log(y) ~ x)
+~~~
