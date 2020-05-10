@@ -374,4 +374,4 @@ lm(log(y) ~ x)
 
 ### R Tips  
 broom::augment(lm_summary): 変数、予測値、残差等をまとめたデータフレームを作成  
-MASS::boxcox(lm_summary): 被説明変数の対数変換を前提に、ベキ乗値、回帰係数を最尤法で推定する  
+MASS::boxcox(lm_summary): 被説明変数の対数変換を前提に、ベキ乗値、回帰係数を最尤法で推定する（Box-Cox法）  
