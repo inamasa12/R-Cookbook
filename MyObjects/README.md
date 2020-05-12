@@ -81,10 +81,13 @@ datasets内のデータはロード済みのため、すぐに使える
 `remove.packages("ggplot2")`: パッケージを完全に削除  
 `source("myScript.R")`: スクリプトの実行  
 `install_github("thomasp85/tidygraph")`: githubからのパッケージインストール  
+`install.packages("foreign_0.8-74.tar.gz", repos = NULL, type = "source")`:  
+古いバージョンのパッケージをインストールする場合は、作業フォルダに解凍前のファイルを保存し、インストールする  
 
 ## Chapter4 入出力  
 readrパッケージがお勧め（固定幅、タブ・スペース区切り、カンマ区切り等に対応する関数がそれぞれある）  
-URLを指定して、HTTPサーバーやFTPサーバーから直接データを取得することも可能  
+Uinstall.packages("foreign_0.8-74.tar.gz", repos =  
+NULL, type = "source"  RLを指定して、HTTPサーバーやFTPサーバーから直接データを取得することも可能  
 Excelとのやりとりにはopenxlsxを用いる  
 HTMLの読み込みとデータテーブルの抽出にはrvestが便利  
 各種RDBとの連携には、ベースとなるDBIと各種バックエンドパッケージが必要になる  
