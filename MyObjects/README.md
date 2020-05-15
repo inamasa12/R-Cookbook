@@ -384,5 +384,6 @@ lm(log(y) ~ x)
 broom::augment(lm_summary): 変数、予測値、残差等をまとめたデータフレームを作成  
 MASS::boxcox(lm_summary): 被説明変数の対数変換を前提に、ベキ乗値、回帰係数を最尤法で推定する（Box-Cox法）  
 confint(lm_summary, level=0.99): 回帰係数の信頼区間  
-plot(lm_summary, which=1): 回帰残差のプロット  
+plot(lm_summary): 回帰残差のプロット等の回帰診断  
+car::outlierTest(lm_summary): 異常値の検定  
 
