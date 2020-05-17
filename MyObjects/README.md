@@ -381,6 +381,11 @@ lm(y ~ poly(x, 3, raw=TRUE))
 lm(log(y) ~ x)
 ~~~
 
+ANOVAは正規分布を仮定している ⇒ そうでない場合はクラスカル＝ウォリス検定を使用する  
+
+
+
+
 ### R Tips  
 broom::augment(lm_summary): 変数、予測値、残差等をまとめたデータフレームを作成  
 MASS::boxcox(lm_summary): 被説明変数の対数変換を前提に、ベキ乗値、回帰係数を最尤法で推定する（Box-Cox法）  
@@ -389,4 +394,5 @@ plot(lm_summary): 回帰残差のプロット等の回帰診断
 car::outlierTest(lm_summary): 異常値の検定  
 lmtest::dwtest(lm_summary): 残差の時系列相関の検定（帰無仮説は「自己相関がない」）  
 predict(lm_summary, newdata=x_df): 推定モデルを使用した予測、interval="prediction"で予測区間も併せて算出  
+oneway.test(var~factor, data, subset=index): 一元配置分散分析（帰無仮説は「全ての平均値は同じ」）、デフォルトは「グループの分散は異なる」  
 
