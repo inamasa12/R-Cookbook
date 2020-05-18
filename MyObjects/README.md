@@ -382,8 +382,14 @@ lm(log(y) ~ x)
 ~~~
 
 ANOVAは正規分布を仮定している ⇒ そうでない場合はクラスカル＝ウォリス検定を使用する  
+但し、クラスカル＝ウォリス検定も各分布が同じ形状であることを前提としている  
 
-
+ANOVAを実行し、各カテゴリカル変数による違いを視覚化する（Jhon TukeyのHSD法）  
+~~~
+m <- aov(y~x, subset=1:2500, data=df)
+TukeyHSD(m)
+plot(TukeyHSD(m))
+~~~
 
 
 ### R Tips  
@@ -395,4 +401,5 @@ car::outlierTest(lm_summary): 異常値の検定
 lmtest::dwtest(lm_summary): 残差の時系列相関の検定（帰無仮説は「自己相関がない」）  
 predict(lm_summary, newdata=x_df): 推定モデルを使用した予測、interval="prediction"で予測区間も併せて算出  
 oneway.test(var~factor, data, subset=index): 一元配置分散分析（帰無仮説は「全ての平均値は同じ」）、デフォルトは「グループの分散は異なる」  
-
+fareway::interaction.plot(df$cat1, df$cat2, df$y): 二次元の効果をプロット  
+kruskal.test(var~factor, data=df): クラスカル＝ウォリス検定  
