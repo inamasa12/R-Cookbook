@@ -276,6 +276,7 @@ corのデフォルトはピアソン
 
 
 ## Chapter10 グラフィックス  
+
 * ggplot2  
 ggplotが基本のプロット用関数  
 リスト型（縦長）に形成したデータフレームがデータの基本形  
@@ -348,6 +349,7 @@ colors(): 使用可能な色のリストを出力
 tidyverse::if_else(condition, A, B): if演算  
 ggsave("g1.jpg", plot=g1, units="in", width=5, height=4): ggsaveは独立した関数としても使用できる  
 
+
 ## Chapter11 線形回帰とANOVA  
 
 R2は予測値の分散を実測値の分散で割ったもの  
@@ -394,7 +396,6 @@ TukeyHSD(m)
 plot(TukeyHSD(m))
 ~~~
 
-
 ### R Tips  
 broom::augment(lm_summary): 変数、予測値、残差等をまとめたデータフレームを作成  
 MASS::boxcox(lm_summary): 被説明変数の対数変換を前提に、ベキ乗値、回帰係数を最尤法で推定する（Box-Cox法）  
@@ -406,3 +407,18 @@ predict(lm_summary, newdata=x_df): 推定モデルを使用した予測、interv
 oneway.test(var~factor, data, subset=index): 一元配置分散分析（帰無仮説は「全ての平均値は同じ」）、デフォルトは「グループの分散は異なる」  
 fareway::interaction.plot(df$cat1, df$cat2, df$y): 二次元の効果をプロット  
 kruskal.test(var~factor, data=df): クラスカル＝ウォリス検定  
+
+
+## Chapter12 便利なテクニック  
+
+
+### R Tips  
+(x <- 1 / pi): 括弧で囲むと値が出力されるため、デバッグに使用できる  
+rowSums(df): 行ごとに列を合計  
+colSums(df): 列ごとに行を合計
+cut(x, breaks, label): 連続変数xの各点を、breaksに従って分類し、labelの名称を与える ⇒ ビニング  
+match(a, x): aにマッチするxの要素の位置を返す  
+which.min(x): 最小値の位置を返す  
+seq_along(x): 1:length(x)  
+
+
