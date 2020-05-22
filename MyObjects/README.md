@@ -411,6 +411,13 @@ plot(TukeyHSD(m))
 
 ## Chapter12 便利なテクニック  
 
+時間の計測  
+~~~
+library(tictoc)
+tic('proc time')
+process
+res <- toc()
+~~~
 
 ### R Tips  
 `(x <- 1 / pi)`: 括弧で囲むと値が出力されるため、デバッグに使用できる  
@@ -422,4 +429,9 @@ plot(TukeyHSD(m))
 `seq_along(x)`: 1:length(x)  
 `pmin(x, y), pmax(x, y)`: ペアワイズの最小値、最大値  
 `tidyverse::arrange(df, col1, -col2)`: データフレームを指定の列でソート  
+`attributes(x), attr(x, "name")`: オブジェクトが持つ属性  
+`class(x)`: オブジェクトクラス  
+`mode(x)`: ネイティブのデータ構造  
+`str(x)`: 内部構造と内容  
+
 
