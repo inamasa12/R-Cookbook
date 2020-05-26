@@ -439,7 +439,10 @@ res <- toc()
 ## Chapter13 高度な数値計算と統計  
 
 ### R Tips  
-`optimize(f, lower=-20, upper=20)`: 一変数関数fの最小値と、最小値となる変数の値の組み合わせを返す  
+`optimize(f, lower=-20, upper=20)`: 単変量関数fの最小値と、最小値となる変数の値の組み合わせを返す  
+`optim(ini_vec, f)`: 初期値から始めて、多変量関数の最小値を求める  
+`eigen(matrix)`: 固有値、固有ベクトルの算出  
+`prcomp(~ x + y)`: 主成分分析  
 
 
 
