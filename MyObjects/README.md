@@ -438,13 +438,19 @@ res <- toc()
 
 ## Chapter13 高度な数値計算と統計  
 
-クラスタリング  
+* クラスタリング  
 ~~~
 d <- dist(x)              観測値間の距離を計算
 hc <- hclust(d)           クラスタの計算
 clust <- cutree(hc, k=n)  nクラスに分類
 ~~~
 
+* ロジスティック回帰  
+予測として確率値を返したい時は、typeに"response"を選択する  
+~~~
+m <- glm(y ~ factor, family=binomial)
+predict(m, type="response", newdata=new)
+~~~
 
 
 ### R Tips  
