@@ -460,10 +460,35 @@ predict(m, type="response", newdata=new)
 `tapply(x, factor(y), mean)`: ファクター別に関数を適用  
 `factanal(matrix, factors=3)`: 因子分析  
 
+
 ## Chapter14 時系列分析  
 
+zooパッケージ、xtsパッケージが有用  
+xtsはzooの全ての処理を実行できる  
+標準のtsパッケージの関数を使う際には、as.ts(x)関数でtsクラスに変換して適用する  
+tidyverse系のtsibbleはパネル分析時に便利  
+計量ファイナンスにはtimeSeriesも有用とのこと  
+財務データ用のプロット関数を用意したquantmodパッケージがある  
 
+
+* 時系列データの作成  
+~~~
+x <- c(3, 4, 1, 4, 8)
+dt <- seq(as.Date("2018-1-1"), as.Date("2018-1-5"), by="days")
+ts <- zoo(x, dt)
+~~~
+
+* 時系列グラフの作成  
+~~~
+main <- "IBM: Historical vs. Inflation-Adjusted"
+lty <- c("dotted", "solid")
+plot(ibm.infl,
+     lty = lty, main = main,
+     legend.loc="left")
+~~~
 
 
 ### R Tips  
+`index(zoo)`: 時系列インデックスの取得  
+`coredata(zoo)`: データ部分の取得  
 
