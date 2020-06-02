@@ -470,7 +470,7 @@ tidyverse系のtsibbleはパネル分析時に便利
 計量ファイナンスにはtimeSeriesも有用とのこと  
 財務データ用のプロット関数を用意したquantmodパッケージがある  
 xts['2010/2012']という書式で2010年から2012年までのデータ取得が可能（xtsはデータ抽出の自由度が高い）  
-
+時系列オブジェクト同士の計算では、日付は自動的に揃えてくれる  
 
 * 時系列データの作成  
 ~~~
@@ -495,5 +495,7 @@ plot(ibm.infl,
 `window(ibm, start=as.Date("2010-1-5"), end=as.Date("2010-1-7"))`: 指定期間の抽出  
 `merge(xts1, xts2, all=TRUE)`: 異種の時系列データ結合、allはTRUEのとき全外部結合、FALSEのとき内部結合  
 `na.locf(xts)`: NULLを直前の値で埋める  
-
+`lag(xts, k=-1, na.pad=T)`: 1日前のデータが当日のデータになる（ラグ1）  
+`diff(xts, lag=12)`: 12日前との差  
+`apply.daily[weekly, monthly, quarterly, yearly](xts, func)`: 期間毎に関数を適用  
 
