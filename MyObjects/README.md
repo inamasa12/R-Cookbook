@@ -471,6 +471,9 @@ tidyverse系のtsibbleはパネル分析時に便利
 財務データ用のプロット関数を用意したquantmodパッケージがある  
 xts['2010/2012']という書式で2010年から2012年までのデータ取得が可能（xtsはデータ抽出の自由度が高い）  
 時系列オブジェクト同士の計算では、日付は自動的に揃えてくれる  
+自己相関がxある場合は、MA(x)が検討される  
+偏自己相関がxある場合は、AR(x)が検討される  
+
 
 * 時系列データの作成  
 ~~~
@@ -497,5 +500,16 @@ plot(ibm.infl,
 `na.locf(xts)`: NULLを直前の値で埋める  
 `lag(xts, k=-1, na.pad=T)`: 1日前のデータが当日のデータになる（ラグ1）  
 `diff(xts, lag=12)`: 12日前との差  
+`rollmean(xts, 7, align="right")`: 移動平均値の計算（rightは過去データのみを使用する）  
 `apply.daily[weekly, monthly, quarterly, yearly](xts, func)`: 期間毎に関数を適用  
+`na.omit(xts)`: データがNAの点を除く  
+`rollapply(xts, width=30, by=30, FUN=sd)`: widthの期間のデータを用いてbyの間隔毎にFUNを適用  
+`acf(xts)`: 自己相関を計算  
+`Box.test(xts)`: 自己相関の検定（ボックス＝ピアース検定）、帰無仮説は「自己相関がない」、サンプル数が少ない場合はtype="Ljung-Box"を指定する（リュング＝ボックス検定）  
+`pacf(xts)`: 偏自己相関を計算  
+`forecast::Ccf(v1, v2)`: 各ラグの相関を計算  
+
+
+
+
 
