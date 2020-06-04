@@ -508,6 +508,7 @@ plot(ibm.infl,
 `Box.test(xts)`: 自己相関の検定（ボックス＝ピアース検定）、帰無仮説は「自己相関がない」、サンプル数が少ない場合はtype="Ljung-Box"を指定する（リュング＝ボックス検定）  
 `pacf(xts)`: 偏自己相関を計算  
 `forecast::Ccf(v1, v2)`: 各ラグの相関を計算  
+`ggplot2::autoplot(xts)`: 簡易に時系列をプロット  
 
 
 
