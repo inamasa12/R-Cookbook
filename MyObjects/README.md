@@ -491,6 +491,13 @@ plot(ibm.infl,
      legend.loc="left")
 ~~~
 
+* ARIMA  
+~~~
+auto.arima(ts, seasonal=T)
+m <- arima(ts, order=c(3, 2, 2))
+m <- arima(ts, order=c(3, 2, 2), fixed=c(0, NA, NA, 0, NA)): fixedでは除きたい変数にゼロを指定
+confint(m): 信頼区間
+~~~
 
 ### R Tips  
 `index(zoo)`: 時系列インデックスの取得  
