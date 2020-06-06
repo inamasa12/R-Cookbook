@@ -497,6 +497,9 @@ auto.arima(ts, seasonal=T)
 m <- arima(ts, order=c(3, 2, 2))
 m <- arima(ts, order=c(3, 2, 2), fixed=c(0, NA, NA, 0, NA)): fixedでは除きたい変数にゼロを指定
 confint(m): 信頼区間
+checkresiduals(m): 残差の正規性診断  
+fc_m <- forecast(m): 将来10期の予測
+autoplot(fc_m): 予測を含めたグラフ化
 ~~~
 
 ### R Tips  
@@ -516,6 +519,7 @@ confint(m): 信頼区間
 `pacf(xts)`: 偏自己相関を計算  
 `forecast::Ccf(v1, v2)`: 各ラグの相関を計算  
 `ggplot2::autoplot(xts)`: 簡易に時系列をプロット  
+`tseries::adf.test(vex)`: 定常性の検定（トレンド除去あり）、帰無仮説は「定常ではない」  
 
 
 
