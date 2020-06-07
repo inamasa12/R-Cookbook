@@ -520,6 +520,8 @@ autoplot(fc_m): 予測を含めたグラフ化
 `forecast::Ccf(v1, v2)`: 各ラグの相関を計算  
 `ggplot2::autoplot(xts)`: 簡易に時系列をプロット  
 `tseries::adf.test(vex)`: 定常性の検定（トレンド除去あり）、帰無仮説は「定常ではない」  
+`locpoly(x=x, y=y, bandwidth=bw, gridsize=gridsize)`: 多項式によるスムージング、バンド幅bwとデータ点の数gridsizeを指定  
+`dpill(x, y, gridsize=gridsize)`: 多項式スムージングにおける適切なバンド幅を推定  
 
 
 
