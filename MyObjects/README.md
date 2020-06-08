@@ -524,6 +524,34 @@ autoplot(fc_m): 予測を含めたグラフ化
 `dpill(x, y, gridsize=gridsize)`: 多項式スムージングにおける適切なバンド幅を推定  
 
 
+## Chapter15 シンプルなプログラミング  
+
+* 条件分岐  
+~~~
+if (x>=0) {
+  print(sqrt(x))
+} else {
+  print("negative")
+}
+~~~
+* ループ  
+~~~
+for (x in 1:5){
+  print(x)
+}
+~~~
+* 関数  
+~~~
+cv <- function{
+  sd(x) / mean(x)
+}
+~~~
+
+
+### R Tips  
+`ifelse(vec >= 100, "big", "small")`: ベクトルにif関数を適用  
+
+
 
 
 
