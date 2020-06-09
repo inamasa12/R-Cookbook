@@ -540,9 +540,17 @@ for (x in 1:5){
   print(x)
 }
 ~~~
+* switch文  
+~~~
+num <- switch{s,
+  one = 1,
+  two = 2,
+  NA
+}
+~~~
 * 関数  
 ~~~
-cv <- function{
+cv <- function(x=1){
   sd(x) / mean(x)
 }
 ~~~
@@ -550,8 +558,8 @@ cv <- function{
 
 ### R Tips  
 `ifelse(vec >= 100, "big", "small")`: ベクトルにif関数を適用  
-
-
-
+`stop("message")`: エラーメッセージを出して関数を終了する  
+`warning('message')`: ウォーニングを出す  
+`func2 = possibly(func1, otherwise=NULL)`: エラー時の返り値を設定した新しい関数を返す  
 
 
