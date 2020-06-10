@@ -526,6 +526,10 @@ autoplot(fc_m): 予測を含めたグラフ化
 
 ## Chapter15 シンプルなプログラミング  
 
+独自の関数をスクリプトファイルにまとめて、`source(**.R)`することで使用できる  
+スクリプトを選択し、ctrl+Iで書式を整える  
+
+
 * 条件分岐  
 ~~~
 if (x>=0) {
@@ -555,11 +559,17 @@ cv <- function(x=1){
 }
 ~~~
 
-
 ### R Tips  
 `ifelse(vec >= 100, "big", "small")`: ベクトルにif関数を適用  
 `stop("message")`: エラーメッセージを出して関数を終了する  
 `warning('message')`: ウォーニングを出す  
 `func2 = possibly(func1, otherwise=NULL)`: エラー時の返り値を設定した新しい関数を返す  
+`function(x) print(x)`: 匿名関数、一時的な関数定義  
 
+
+## Chapter16 R Markdownと公開  
+
+マークダウンで書いておけば、色々なフォーマットに出力できる（ニッティング）
+後に修正が容易なのはHTML  
+Knitで目的のフォーマットで出力  
 
